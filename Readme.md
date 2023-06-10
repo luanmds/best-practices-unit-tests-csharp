@@ -1,24 +1,23 @@
 # Best Practices Unit Tests in C#
 
-Esse projeto tem o objetivo de exemplificar as boas práticas ao realizar Testes Unitários. 
+This project aims to exemplify good practices in Unit Tests
 
-Para alcançar esse objetivo, demonstra-se, através cenários baseados no contexto do domínio desse repositório, 
-diversos exemplos de testes unitários para que auxilie o Desenvolvedor a conseguir entender e diferenciar 
-o que o teste ruim do teste bom.
+To achieve this goal, it demonstrates through scenarios based on the domain context of this repository 
+and several examples of unit tests to help the Developer 
+to understand what is a good test.
 
-## Repo Structure
+## Repository Structure
 
 In this repo there are three projects:
 
-- `src/BestPractices.Domain`: possui alguns cenários e regras de negócio voltado para o contexto de conceder empréstimo a um cliente.
-- `tests/BestPractices.BadTests`: exemplos de testes ruins utilizando o Domain. Alguns testes podem falhar!
-- `tests/BestPractices.GoodTests`: exemplos de testes bons utilizando o Domain.
+- `src/BestPractices.Domain`: have scenarios and busines rules to grant loan for a customer context.
+- `tests/BestPractices.GoodTests`: good tests examples using the Domain context.
 
 ## Libraries and Frameworks used in this repo
 
-- [Moq]()
-- [xUnit]()
-- [FluentValidation]()
+- [Moq](https://github.com/moq/moq)
+- [xUnit](https://xunit.net/)
+- [FluentValidation](https://fluentassertions.com/)
 
-## Referências utilizadas para estudos 
+## References
 
