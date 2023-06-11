@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YLTdX//AEw9v0lJwhrOGJVUvMTOjNgkcPyZhcR79q/JLEhi29CaJ5JiGugn8Pe5dzldccczoavEc3fOyrjmRmg==",
+  "dgSpecHash": "4XJ5r7ohooGk5SNuLmCtVSd+vWq9rUqG7h7V3k/Al6wy8SxM6Yc0NfrS619rlXEOhSmCQv5DnOj0mCj2wMyj7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\luan.msilva\\dev\\best-practices-unit-tests-csharp\\src\\BestPractices.Domain\\BestPractices.Domain.csproj",
+  "projectFilePath": "C:\\Users\\luan.msilva\\dev\\best-practices-unit-tests-csharp\\src\\BestPractices.Domain\\BestPracticesUnitTests.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\luan.msilva\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\luan.msilva\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",

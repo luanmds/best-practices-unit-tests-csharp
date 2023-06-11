@@ -383,9 +383,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luan.msilva\\dev\\best-practices-unit-tests-csharp\\src\\BestPractices.Domain\\BestPractices.Domain.csproj",
-      "projectName": "BestPractices.Domain",
-      "projectPath": "C:\\Users\\luan.msilva\\dev\\best-practices-unit-tests-csharp\\src\\BestPractices.Domain\\BestPractices.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\luan.msilva\\dev\\best-practices-unit-tests-csharp\\src\\BestPractices.Domain\\BestPracticesUnitTests.Domain.csproj",
+      "projectName": "BestPracticesUnitTests.Domain",
+      "projectPath": "C:\\Users\\luan.msilva\\dev\\best-practices-unit-tests-csharp\\src\\BestPractices.Domain\\BestPracticesUnitTests.Domain.csproj",
       "packagesPath": "C:\\Users\\luan.msilva\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\luan.msilva\\dev\\best-practices-unit-tests-csharp\\src\\BestPractices.Domain\\obj\\",
       "projectStyle": "PackageReference",

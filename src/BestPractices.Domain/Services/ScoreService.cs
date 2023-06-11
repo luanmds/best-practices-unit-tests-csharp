@@ -40,13 +40,15 @@ public class ScoreService : IScoreService
         _logger.LogInformation($"Score with ID:{score.Id} save successfully");
     }
 
-    private static int CalculateScore(decimal debits)
+    public static int CalculateScore(decimal debits)
     {
         // Each 100 in debits, subtractes 10 from score
-        if (debits > 1000 || debits <= 0) return 0;
+        if (debits > 1000 || debits < 0) return 0;
 
-        int score = Convert.ToInt32(debits / 10);        
-        
+        if (debits == 0) return 100;
+
+        int score = MaxScoreValue - (Convert.ToInt32(debits) / 10);
+
         return score > MaxScoreValue ? MaxScoreValue : score < MinScoreValue ? MinScoreValue : score;
     }
 }

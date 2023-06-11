@@ -13,7 +13,7 @@ public class CustomerDto
     public int Age { get; set; }
     public decimal DebitsAmount { get; set; }
 
-    public Customer ToCustomer()
+    public virtual Customer ToCustomer()
     {
         return new Customer()
         {

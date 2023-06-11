@@ -20,4 +20,8 @@ In this repo there are three projects:
 - [FluentValidation](https://fluentassertions.com/)
 
 ## References
-
+- [Unit testing best practices with .NET Core and .NET Standard](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-best-practices)
+- Unit Testing Principles, Practices, and Patterns - by Vladimir Khorikov
+- [Unit testing C# in .NET Core using dotnet test and xUnit](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test)
+- [https://www.arhohuttunen.com/test-data-builders/](https://www.arhohuttunen.com/test-data-builders/)
+- [https://martinfowler.com/articles/mocksArentStubs.html](https://martinfowler.com/articles/mocksArentStubs.html#TestsWithMockObjects)

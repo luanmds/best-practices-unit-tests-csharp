@@ -27,13 +27,15 @@ public class LoanService : ILoanService
         var loanValue = CalculateLoanValue(score.Customer.DebitsAmount, score.ScoreValue);
         var feesByMonth = CalculateFeesByMonth(score.ScoreValue);
 
-        new Loan()
+        var loan = new Loan()
         {
             Value = loanValue,
             Borrower = score.Customer,
             RepaymentDate = repaymentDate,
             FeesByMonth = feesByMonth,
         };
+
+        await _repository.SaveAsync(loan);
     }
 
     public decimal CalculateLoanValue(decimal debitsAmount, int score)
@@ -45,16 +47,13 @@ public class LoanService : ILoanService
         return LoanValue > MaxLoanValue ? MaxLoanValue : LoanValue;
     }
 
-    private static double CalculateFeesByMonth(int score)
+    public double CalculateFeesByMonth(int score)
     {
-        switch (score)
+        return score switch
         {
-            case >= 90 and <= 100: 
-                return 12.5;
-            case < 90 and >= 50:
-                return 16;
-            default:
-                return 19.3;
-        }
+            >= 90 and <= 100 => 12.5,
+            < 90 and >= 50 => 16,
+            _ => 19.3,
+        };
     }
 }

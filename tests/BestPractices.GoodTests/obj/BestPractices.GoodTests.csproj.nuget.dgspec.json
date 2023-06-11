@@ -4,6 +4,68 @@
     "C:\\Users\\luan.msilva\\dev\\best-practices-unit-tests-csharp\\tests\\BestPractices.GoodTests\\BestPractices.GoodTests.csproj": {}
   },
   "projects": {
+    "C:\\Users\\luan.msilva\\dev\\best-practices-unit-tests-csharp\\src\\BestPractices.Domain\\BestPracticesUnitTests.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\luan.msilva\\dev\\best-practices-unit-tests-csharp\\src\\BestPractices.Domain\\BestPracticesUnitTests.Domain.csproj",
+        "projectName": "BestPracticesUnitTests.Domain",
+        "projectPath": "C:\\Users\\luan.msilva\\dev\\best-practices-unit-tests-csharp\\src\\BestPractices.Domain\\BestPracticesUnitTests.Domain.csproj",
+        "packagesPath": "C:\\Users\\luan.msilva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luan.msilva\\dev\\best-practices-unit-tests-csharp\\src\\BestPractices.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\luan.msilva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://stonepagamentos.pkgs.visualstudio.com/_packaging/FinancialProductsArtifacts/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\luan.msilva\\dev\\best-practices-unit-tests-csharp\\tests\\BestPractices.GoodTests\\BestPractices.GoodTests.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -28,7 +90,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\luan.msilva\\dev\\best-practices-unit-tests-csharp\\src\\BestPractices.Domain\\BestPracticesUnitTests.Domain.csproj": {
+                "projectPath": "C:\\Users\\luan.msilva\\dev\\best-practices-unit-tests-csharp\\src\\BestPractices.Domain\\BestPracticesUnitTests.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
