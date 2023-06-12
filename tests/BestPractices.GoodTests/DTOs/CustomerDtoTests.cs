@@ -1,23 +1,22 @@
-﻿using AutoFixture;
-using BestPractices.Domain.DTOs;
+﻿using BestPractices.Domain.DTOs;
 using FluentAssertions;
 using Xunit;
 
 namespace BestPractices.GoodTests.DTOs
 {
-    public class CustomerDtoTests
+    public class CustomerDtoTests : IClassFixture<CustomerDto>
     {
-        private readonly Fixture _fixture;
+        private readonly CustomerDto _dto;
 
-        public CustomerDtoTests()
+        public CustomerDtoTests(CustomerDto dto)
         {
-            _fixture = new Fixture();
+            _dto = dto;
         }
 
         [Fact]
         public void ToCustomer_should_returns_Customer_with_Dto_data()
         {
-            var sut = _fixture.Create<CustomerDto>();
+            var sut = _dto;
 
             var result = sut.ToCustomer();
 

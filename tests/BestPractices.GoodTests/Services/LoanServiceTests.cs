@@ -4,6 +4,7 @@ using BestPractices.Domain.Repositories.Interfaces;
 using BestPractices.Domain.Services;
 using FluentAssertions;
 using Moq;
+using System.Collections;
 using Xunit;
 
 namespace BestPractices.GoodTests.Services
@@ -51,12 +52,7 @@ namespace BestPractices.GoodTests.Services
         }
 
         [Theory]
-        [InlineData(2000.0f, 0, 0)]
-        [InlineData(1000.0f, 0, 0)]
-        [InlineData(500.3f, 50, 4499.7)]
-        [InlineData(450f, 55, 5050)]
-        [InlineData(250.9f, 75, 7249.1)]
-        [InlineData(0f, 100, 10000)]
+        [ClassData(typeof(CalculateLoanValueData))]
         public void CalculateLoanValue_should_return_correct_value(decimal debits, int score, decimal expectedLoan)
         {
             decimal result = _service.CalculateLoanValue(debits, score);
@@ -76,5 +72,23 @@ namespace BestPractices.GoodTests.Services
 
             result.Should().Be(expectedValue);
         }
+    }
+
+    public class CalculateLoanValueData : IEnumerable<object[]>
+    {
+        public IEnumerator<object[]> GetEnumerator()
+        {
+            yield return new object[] { 2000f, 0, 0M };
+            yield return new object[] { 450f, -55, 0 };
+            yield return new object[] { 500.3f, 50, 4499.7 };
+            yield return new object[] { 250.9f, 75, 7249.1 };
+            yield return new object[] { 0f, 100, 10000 };
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
     }
 }

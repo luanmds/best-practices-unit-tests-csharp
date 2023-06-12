@@ -2,7 +2,6 @@
 using BestPractices.Domain.Entities;
 using BestPractices.Domain.Repositories.Interfaces;
 using BestPractices.Domain.Services;
-using Castle.Core.Resource;
 using FluentAssertions;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -59,17 +58,22 @@ namespace BestPractices.GoodTests.Services
         }
 
         [Theory]
-        [InlineData(2000.0f, 0)]
-        [InlineData(1000.0f, 0)]
-        [InlineData(500.3f, 50)]
-        [InlineData(450f, 55)]
-        [InlineData(250.9f, 75)]        
-        [InlineData(0f, 100)]
+        [MemberData(nameof(CalculateScoreData))]
         public void CalculateScore_should_return_correct_value_to_the_debits_amount(decimal debits, int expectedScore)
         {
             int score = ScoreService.CalculateScore(debits);
 
             score.Should().Be(expectedScore);
+        }
+
+        public static IEnumerable<object[]> CalculateScoreData()
+        {
+            yield return new object[] { 2000f, 0 };
+            yield return new object[] { 1000.0f, 0 };
+            yield return new object[] { 500.3f, 50 };
+            yield return new object[] { 450f, 55 };
+            yield return new object[] { 250.9f, 75 };
+            yield return new object[] { 0f, 100 };
         }
     }
 }

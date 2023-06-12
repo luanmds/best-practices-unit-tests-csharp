@@ -40,7 +40,7 @@ public class LoanService : ILoanService
 
     public decimal CalculateLoanValue(decimal debitsAmount, int score)
     {        
-        if (score == 0) return 0;
+        if (score <= 0) return 0;
 
         decimal LoanValue = (score * 100) - debitsAmount;
         

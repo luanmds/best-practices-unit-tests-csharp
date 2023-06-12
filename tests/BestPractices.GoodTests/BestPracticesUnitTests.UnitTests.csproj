@@ -33,4 +33,8 @@
 	  <ProjectReference Include="..\..\src\BestPractices.Domain\BestPracticesUnitTests.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Shared\" />
+  </ItemGroup>
+
 </Project>
