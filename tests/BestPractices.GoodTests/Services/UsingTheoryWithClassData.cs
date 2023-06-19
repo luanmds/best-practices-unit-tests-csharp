@@ -9,14 +9,14 @@ using Xunit;
 
 namespace BestPractices.GoodTests.Services
 {
-    public class LoanServiceTests
+    public class UsingTheoryWithClassData
     {
         private readonly Mock<ILoanRepository> _repositoryMock;
         private readonly Mock<IScoreRepository> _scoreRepositoryMock;
         private readonly Fixture _fixture;
         private readonly LoanService _service;
 
-        public LoanServiceTests()
+        public UsingTheoryWithClassData()
         {
             _repositoryMock = new Mock<ILoanRepository>();
             _scoreRepositoryMock = new Mock<IScoreRepository>();

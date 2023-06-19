@@ -9,7 +9,7 @@ using Xunit;
 
 namespace BestPractices.GoodTests.Services
 {
-    public class ScoreServiceTests
+    public class UsingTheoryWIthMemberData
     {
         private readonly Mock<ICustomerRepository> _customerRepositoryMock;
         private readonly Mock<IScoreRepository> _repositoryMock;
@@ -17,7 +17,7 @@ namespace BestPractices.GoodTests.Services
         private readonly Fixture _fixture;
         private readonly ScoreService _service;
 
-        public ScoreServiceTests()
+        public UsingTheoryWIthMemberData()
         {
             _repositoryMock = new Mock<IScoreRepository>();
             _customerRepositoryMock = new Mock<ICustomerRepository>();
