@@ -38,7 +38,7 @@ namespace BestPractices.GoodTests.Services
                 ReturnsAsync(customer);
             _repositoryMock.Setup(x => x.UpdateAsync(It.IsAny<Customer>())).
                 ReturnsAsync(customerId);
-n
+
             await _service.UpdateStatusScore(status, customerId);
 
             _repositoryMock.Verify(x => x.GetAsync(It.IsAny<string>()), Times.Once);
